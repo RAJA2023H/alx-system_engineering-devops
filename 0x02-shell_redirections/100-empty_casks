@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -la | find . -empty -printf '%P\n'
+find .-name '*' -empty -printf '%P\n'

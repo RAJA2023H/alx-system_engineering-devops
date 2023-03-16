@@ -1,2 +1,2 @@
 #!/bin/bash
-cat | cut -c 1 | tr  '\n' '\t' | tr -d '\t'
+cat | cut -c1 | tr -d '\n'

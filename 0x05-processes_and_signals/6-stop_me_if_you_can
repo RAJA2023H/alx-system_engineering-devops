@@ -2,6 +2,4 @@
 # stops 4-to_infinity_and_beyond process.
 #Requirements: You cannot use kill or killall
 ProcessToKill="4-to_infinity_and_beyond"
-echo "Trying to kill process: $ProcessTokill"
-pkill -f "$ProcessToKill"
-echo "Exit status: $?"
+pkill -f  "$ProcessToKill"

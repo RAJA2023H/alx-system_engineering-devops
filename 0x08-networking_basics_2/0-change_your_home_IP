@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#Bash script that configures an Ubuntu server with the below requirements.
+# localhost resolves to 127.0.0.2
+# facebook.com resolves to 8.8.8.8.
+# The checker is running on Docker
+cp /etc/hosts ~/hosts.new
+sed -i 's/127.0.0.1/127.0.0.2/' ~/hosts.new
+# using sed 's/regexp/replacement/' filename (man sed)
+sed -i 's/\bfacebook.com\b/8.8.8./' ~/hosts.new
+sudo cp -f ~/hosts.new /etc/hosts
+rm ~/hosts.new

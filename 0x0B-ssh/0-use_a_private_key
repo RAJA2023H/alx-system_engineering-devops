@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#SSh connection Command
+ssh -i ~/.ssh/school  ubuntu@18.234.106.47

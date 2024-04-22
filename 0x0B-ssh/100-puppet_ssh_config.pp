@@ -1,12 +1,12 @@
-file { '/root/.ssh/config': # Update the path if necessary
+# make changes to my configuration file using Puppet
+file_line { 'Turn off passwd auth':
   ensure => present,
-  mode   => '0600', # Set permissions to 600
-  owner  => 'root', # Set owner to root
-  group  => 'root', # Set group to root
-  content => "\
-# SSH client configuration
-Host *
-    IdentityFile ~/.ssh/school
-    PasswordAuthentication no
-",
+  line   => '    PasswordAuthentication no',
+  path   => '/etc/ssh/ssh_config',
+}
+
+file_line { 'Declare identity file':
+  ensure => present,
+  line   => '    IdentityFile ~/.ssh/school',
+  path   => '/etc/ssh/ssh_config',
 }

@@ -1,3 +1,4 @@
+# this manifest create a file in /tmp directory
 file { '/tmp/school':
   ensure  => 'present',
   path    => '/tmp/school',

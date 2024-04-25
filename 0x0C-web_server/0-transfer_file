@@ -2,11 +2,6 @@
 #Bash script that transfers a file from our client to a server:
 if [ $# -lt 3 ]; then
 	echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
-	exit 1
 else
-	LOCAL_FILE=$1
-	IP=$2
-	USERNAME=$3
-	PRIVATE_KEY=$4
-	scp -o StrictHostKeyChecking=no -i "$PRIVATE_KEY" "$LOCAL_FILE" "$USERNAME@$IP":~/
+	scp -o StrictHostKeyChecking=no -i $4 $1 "$3@$2:/home/$3"
 fi

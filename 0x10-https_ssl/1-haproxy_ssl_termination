@@ -41,7 +41,7 @@ frontend rajae-frontend
         default_backend rajae-backend
 
 frontend rajae-frontend-https
-        bind *:443 ssl crt /etc/haproxy/certs/rajae.tech.pem
+        bind *:443 ssl crt /etc/haproxy/certs/www.rajae.tech.pem
         http-request set-header X-Forwarded-Proto https
         default_backend rajae-backend
 

@@ -39,7 +39,7 @@ def display_todo_progress(user, todos):
             "TASK_COMPLETED_STATUS",
             "TASK_TITLE"
         ]
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
         for todo in todos:
             writer.writerow({
                 "USER_ID": user_id,

@@ -32,7 +32,7 @@ def display_todo_progress(user, todos):
     all_todos = [todo for todo in todos if todo.get("completed")]
 
     print(
-            "Employee {} is done with tasks ({}/{}):".format(
+            "Employee {} is done with tasks({}/{}):".format(
                 employee_name, len(all_todos), len(todos)
             )
     )
@@ -43,7 +43,7 @@ def display_todo_progress(user, todos):
 
 if __name__ == "__main__":
 
-    if len(sys.argv) == 2 and sys.argv[1].isdigit():
+    if len(sys.argv) == 2 and sys.argv[1].isdigit():i
         user_id = sys.argv[1]
         user, todos = fetch_user_todos(user_id)
         display_todo_progress(user, todos)

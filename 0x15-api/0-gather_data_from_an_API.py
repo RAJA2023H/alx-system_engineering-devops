@@ -43,7 +43,7 @@ def display_todo_progress(user, todos):
 
 if __name__ == "__main__":
 
-    if len(sys.argv) == 2 and sys.argv[1].isdigit():i
+    if len(sys.argv) == 2 and sys.argv[1].isdigit():
         user_id = sys.argv[1]
         user, todos = fetch_user_todos(user_id)
         display_todo_progress(user, todos)

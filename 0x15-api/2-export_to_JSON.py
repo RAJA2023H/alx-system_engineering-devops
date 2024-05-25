@@ -28,17 +28,17 @@ def display_todo_progress(user, todos):
     """Displays the TODO list progress for the given user."""
     employee_name = user.get("username")
     all_todos = [todo for todo in todos if todo.get("completed")]
+
     tasks = []
     for todo in todos:
         tasks.append({
-            "USER_ID": user_id,
-            "USERNAME": employee_name,
-            "TASK_COMPLETED_STATUS": todo.get("completed"),
-            "TASK_TITLE": todo.get("title")
+            "task": todo.get("title"),
+            "completed": todo.get("completed"),
+            "username": employee_name
             })
-
+    data = {str(user_id): tasks}
     with open(f"{user_id}.json", "w") as jsonfile:
-        json.dump(tasks, jsonfile)
+        json.dump(data, jsonfile)
 
 
 if __name__ == "__main__":

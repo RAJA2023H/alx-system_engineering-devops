@@ -42,11 +42,9 @@ def display_todo_progress(user, todos):
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         for todo in todos:
             writer.writerow({
-                "USER_ID": sys.argv[1],
+                "USER_ID": user_id,
                 "USERNAME": employee_name,
-                "TASK_COMPLETED_STATUS": {
-                    "Completed" if todo["completed"] else "Incomplete"
-                    },
+                "TASK_COMPLETED_STATUS": todo["completed"],
                 "TASK_TITLE": todo["title"]
             })
 

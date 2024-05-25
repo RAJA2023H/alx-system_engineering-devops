@@ -28,7 +28,7 @@ def fetch_user_todos(user_id):
 def display_todo_progress(user, todos):
     """Displays the TODO list progress for the given user."""
 
-    employee_name = user.get("name")
+    employee_name = user.get("username")
     all_todos = [todo for todo in todos if todo.get("completed")]
 
     with open(f"{user_id}.csv", "w", newline="") as csvfile:

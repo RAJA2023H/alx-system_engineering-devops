@@ -31,7 +31,7 @@ def display_todo_progress(user, todos):
 
     print(
             "Employee {} is done with tasks ({}/{}):".format(
-                employee_name, len(completed_todos), len(todos)
+                employee_name, len(all_todos), len(todos)
             )
     )
 

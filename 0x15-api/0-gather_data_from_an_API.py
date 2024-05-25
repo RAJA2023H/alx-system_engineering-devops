@@ -9,7 +9,7 @@ import sys
 
 
 def fetch_user_todos(user_id):
-    """Fetches user and their TODO list based on the user ID."""i
+    """Fetches user and their TODO list based on the user ID."""
 
     res = requests.get(
             f"https://jsonplaceholder.typicode.com/users/{user_id}"
@@ -28,6 +28,7 @@ def fetch_user_todos(user_id):
 def display_todo_progress(user, todos):
     """Displays the TODO list progress for the given user."""
 
+    employee_name = user.get("name")
     all_todos = [todo for todo in todos if todo.get("completed")]
 
     print(
@@ -36,7 +37,7 @@ def display_todo_progress(user, todos):
             )
     )
 
-    for todo in completed_todos:
+    for todo in all_todos:
         print(f"\t {todo.get('title')}")
 
 

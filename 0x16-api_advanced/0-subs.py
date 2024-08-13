@@ -1,4 +1,10 @@
+#!/usr/bin/python3
+"""
+Fetches the number of subscribers for a specified subreddit
+"""
 import requests
+
+headers = {"User-Agent": "MyUserAgent/1.0"}
 
 
 def number_of_subscribers(subreddit):
@@ -14,7 +20,6 @@ def number_of_subscribers(subreddit):
     """
 
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    headers = {"user-agent": "MyCustomUserAgent/1.0"}
     response = requests.get(url, allow_redirects=False, headers=headers)
 
     if response.status_code == 200:

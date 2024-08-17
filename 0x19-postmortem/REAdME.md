@@ -1,5 +1,5 @@
-<h1 align="center">POSTMORTEM: WEB APPLICATION OUTAGE ON AUGUST 15, 2024</h1>	    
-<img align="right" alt="coding" width="200" src="https://media1.tenor.com/m/SgVtJpD9tp0AAAAC/itcrowd-it.gif>
+<h1 align="center">POSTMORTEM: WEB APPLICATION OUTAGE ON AUGUST 15, 2024</h1>
+<img align="center" alt="coding" width="400" src="https://media1.tenor.com/m/SgVtJpD9tp0AAAAC/itcrowd-it.gif">
 <h2 align="left"> Issue Summary</h2>
 
 <h3 align="left">Duration:</h3> August 15, 2024, 14:00 - 16:30 GMT (2 hours, 30 minutes)

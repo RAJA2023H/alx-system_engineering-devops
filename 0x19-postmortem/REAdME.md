@@ -1,16 +1,15 @@
 	    POSTMORTEM: WEB APPLICATION OUTAGE ON AUGUST 15, 2024
-Issue Summary
+#Issue Summary
 
-Duration: August 15, 2024, 14:00 - 16:30 GMT (2 hours, 30 minutes)
+##Duration: August 15, 2024, 14:00 - 16:30 GMT (2 hours, 30 minutes)
 
-Impact: 45% of users experienced slow response times or were unable to access the web application, resulting in a significant drop in traffic and
-user engagement. The issue primarily affected users in Europe and North America.
+##Impact: 45% of users experienced slow response times or were unable to access the web application, resulting in a significant drop in traffic and user engagement. The issue primarily affected users in Europe and North America.
 
-Root Cause: A misconfigured load balancer that caused an uneven distribution of traffic, leading to server overload and degraded application performance.
+##Root Cause: A misconfigured load balancer that caused an uneven distribution of traffic, leading to server overload and degraded application performance.
 
-Timeline
+#Timeline
 
-14:00 GMT - Issue detected by monitoring alerts indicating increased server response times and error rates.
+##14:00 GMT - Issue detected by monitoring alerts indicating increased server response times and error rates.
 
 14:05 GMT - On-call engineer began investigating the issue, initially suspecting a database bottleneck due to recent schema changes.
 
